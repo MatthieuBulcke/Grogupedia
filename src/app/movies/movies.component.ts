@@ -7,6 +7,7 @@ import { Component, OnInit, } from '@angular/core';
 })
 
 export class MoviesComponent implements OnInit {
+  
       title! : String;
       episode_id! : Number;
       opening_crawl! :String;
@@ -22,11 +23,12 @@ export class MoviesComponent implements OnInit {
       created! :String;
       edited! :String;
 
-  constructor() {
-    
-   }
+  constructor(
+
+  ) {}
 
   ngOnInit(): void {
+    
 
     this.title = "A New Hope";
     this.episode_id = 4;
@@ -70,6 +72,6 @@ export class MoviesComponent implements OnInit {
     this.urlApi ="https://swapi.dev/api/films/1/";
     this.created ="2014-12-10T14:23:31.880000Z";
     this.edited ="2014-12-12T11:24:39.858000Z";
+  
   }
-
 }
