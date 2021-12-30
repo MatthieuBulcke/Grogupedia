@@ -303,7 +303,7 @@
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<div class="toolbar" style="position: fixed;bottom:0;height:auto;flex-flow: column;" role="banner">
   <img
     width="40"
     alt="Angular Logo"
@@ -327,7 +327,49 @@
       </svg>
     </a>
 </div>
-
+<div style="position:absolute;z-index:10;margin:2em;" class="searchBar">
+  <input list="result" type="text" id="search" placeholder="Search...">
+  <datalist id="result">
+      <option *ngFor="let people of peoplesNames" value="{{people}}"></option>
+      <option *ngFor="let planets of planetsNames" value="{{planets}}"></option>
+      <option *ngFor="let films of filmsNames" value="{{films}}"></option>
+      <option *ngFor="let species of speciesNames" value="{{species}}"></option>
+      <option *ngFor="let vehicles of vehiclesNames" value="{{vehicles}}"></option>
+      <option *ngFor="let starships of starshipsNames" value="{{starships}}"></option>
+  </datalist>
+  <ul class="list">
+    <li>Personnages
+      <ul>
+        <li *ngFor="let people of peoplesNames">{{people}}</li>
+      </ul>
+    </li>
+    <li>Planètes
+      <ul>
+        <li *ngFor="let planets of planetsNames">{{planets}}</li>
+      </ul>
+    </li>
+    <li>Films
+      <ul>
+        <li *ngFor="let films of filmsNames">{{films}}</li>
+      </ul>
+    </li>
+    <li>Espèces
+      <ul>
+        <li *ngFor="let species of speciesNames">{{species}}</li>
+      </ul>
+    </li>
+    <li>Véhicules
+      <ul>
+        <li *ngFor="let vehicles of vehiclesNames">{{vehicles}}</li>
+      </ul>
+    </li>
+    <li>Vaisseaux
+      <ul>
+        <li *ngFor="let starships of starshipsNames">{{starships}}</li>
+      </ul>
+    </li>
+  </ul>
+</div>
 <div class="content" role="main">
 
   <!-- Highlight Card -->

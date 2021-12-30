@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Stars";
+    src: url("./assets/Starjedi.ttf");
+}
+body{
+    font-family: "Stars",sans-serif;
+}
+.list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.list > li{
+    cursor:pointer;
+    text-align: center;
+    background-color: lightcoral;
+}
+.list > li > ul{
+    display: none;
+    padding:0;
+    text-align: left;
+    list-style:none;
+    background-color: lightblue;
+}
+.list > li:hover > ul{
+    display: block;
+}
