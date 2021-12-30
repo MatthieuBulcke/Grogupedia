@@ -9,7 +9,11 @@ body{
 .list{
     list-style: none;
     display: flex;
+    margin: auto;
     flex-wrap: wrap;
+    background-color: lightseagreen;
+    padding: 1em;
+    width:100%;
 }
 .list > li{
     cursor:pointer;
@@ -22,7 +26,12 @@ body{
     text-align: left;
     list-style:none;
     background-color: lightblue;
+    max-height:20em;
+    overflow:auto;
 }
 .list > li:hover > ul{
     display: block;
+}
+.list > li > ul > li:hover{
+    background-color: lime;
 }
