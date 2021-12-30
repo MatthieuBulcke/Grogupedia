@@ -23,13 +23,13 @@ import { NavComponent } from './nav/nav.component';
     StarshipsComponent,
     VehiclesComponent,
     SpeciesComponent,
-    PlanetsComponent
+    PlanetsComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
-    NavComponent
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
