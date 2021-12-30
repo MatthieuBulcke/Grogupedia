@@ -1,12 +1,14 @@
 
 
 .navbar{
-    background-color: black;
     position: fixed;
     top:0;
     bottom:0;
     width: 200px;
     height: 100vh;
+    background: url("../../assets/stars-back.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .logo{
