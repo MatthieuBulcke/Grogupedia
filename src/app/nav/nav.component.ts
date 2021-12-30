@@ -1,25 +1,29 @@
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss']
 })
-export class AppComponent {
+export class NavComponent implements OnInit {
+
   constructor(private http: HttpClient) {
     this.loadPosts();
   }
-  title = 'grogupedia';
+
+  ngOnInit(): void {
+  }
+  
 
   /*Variables stockées*/
-  cats: any = [];
-  peoplesNames: any = [];
-  planetsNames: any = [];
-  filmsNames: any = [];
-  speciesNames: any = [];
-  vehiclesNames: any = [];
-  starshipsNames: any = [];
+  cats: string[] = [];
+  peoplesNames: string[] = [];
+  planetsNames: string[] = [];
+  filmsNames: string[] = [];
+  speciesNames: string[] = [];
+  vehiclesNames: string[] = [];
+  starshipsNames: string[] = [];
 
 
 
@@ -109,9 +113,9 @@ export class AppComponent {
       // console.log(this.peoplesNames);
       // console.log(this.planetsNames);
       // console.log(this.filmsNames);
-      console.log(this.speciesNames);
-      console.log(this.vehiclesNames);
-      console.log(this.starshipsNames);
+      //console.log(this.speciesNames);
+      //console.log(this.vehiclesNames);
+      //console.log(this.starshipsNames);
     });
   }
 }
