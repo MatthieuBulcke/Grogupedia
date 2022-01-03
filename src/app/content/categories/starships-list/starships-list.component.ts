@@ -9,14 +9,14 @@ import { SwapiService } from 'src/app/services/swapi.service';
 })
 export class StarshipsListComponent implements OnInit {
 
-  people!:object[];
+  starships!:object[];
 
 
   constructor(private SwapiService : SwapiService) {}
 
   ngOnInit(): void {
   
-  this.people=this.SwapiService.getFilms();
+  this.starships=this.SwapiService.getStarships();
 
 }
 }

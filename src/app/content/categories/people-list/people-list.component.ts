@@ -15,7 +15,7 @@ export class PeopleListComponent implements OnInit {
 
   ngOnInit(): void {
   
-  this.people=this.SwapiService.getFilms();
+  this.people=this.SwapiService.getPeoples();
 
 }
 }
