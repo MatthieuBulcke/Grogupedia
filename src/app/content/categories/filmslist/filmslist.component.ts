@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SwapiService } from 'src/app/services/swapi.service';
-import { FilmsComponent } from './films/films.component';
-
 
 @Component({
   selector: 'app-filmslist',
@@ -9,12 +7,9 @@ import { FilmsComponent } from './films/films.component';
   styleUrls: ['./filmslist.component.scss']
 })
 
-
-
 export class FilmslistComponent implements OnInit {
 
   films!:object[];
-
 
   constructor(private SwapiService : SwapiService) {}
 
@@ -23,5 +18,4 @@ export class FilmslistComponent implements OnInit {
   this.films=this.SwapiService.getFilms();
 
   }
-
 }

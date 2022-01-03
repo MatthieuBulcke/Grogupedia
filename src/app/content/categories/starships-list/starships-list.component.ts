@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SwapiService } from 'src/app/services/swapi.service';
+
 
 @Component({
   selector: 'app-starships-list',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarshipsListComponent implements OnInit {
 
-  constructor() { }
+  people!:object[];
+
+
+  constructor(private SwapiService : SwapiService) {}
 
   ngOnInit(): void {
-  }
+  
+  this.people=this.SwapiService.getFilms();
 
+}
 }
