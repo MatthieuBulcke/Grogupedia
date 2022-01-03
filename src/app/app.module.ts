@@ -11,13 +11,13 @@ import { ChildBarComponent } from './nav-bar/parent-bar/child-bar/child-bar.comp
 import { HeaderComponent } from './content/header/header.component';
 import { SearchBarComponent } from './content/header/search-bar/search-bar.component';
 import { ContentComponent } from './content/content.component';
-import { FilmsComponent } from './content/categories/films/films.component';
+import { FilmslistComponent } from './content/categories/films-list/films-list.component';
+import { FilmsComponent } from './content/categories/films-list/films/films.component';
 import { PeopleComponent } from './content/categories/people/people.component';
 import { PlanetsComponent } from './content/categories/planets/planets.component';
 import { SpeciesComponent } from './content/categories/species/species.component';
 import { StarshipsComponent } from './content/categories/starships/starships.component';
 import { VehiclesComponent } from './content/categories/vehicles/vehicles.component';
-import { FilmslistComponent } from './content/categories/filmslist/filmslist.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +29,13 @@ import { FilmslistComponent } from './content/categories/filmslist/filmslist.com
     HeaderComponent,
     SearchBarComponent,
     ContentComponent,
+    FilmslistComponent,
     FilmsComponent,
     PeopleComponent,
     PlanetsComponent,
     SpeciesComponent,
     StarshipsComponent,
-    VehiclesComponent,
-    FilmslistComponent
+    VehiclesComponent
   ],
   imports: [
     BrowserModule,

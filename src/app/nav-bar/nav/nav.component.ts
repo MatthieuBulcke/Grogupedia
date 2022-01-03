@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class NavComponent implements OnInit {
 
   constructor(private http: HttpClient) {
-    this.loadPosts();
+    /* this.loadPosts(); */
   }
 
   ngOnInit(): void {

@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Film } from '../models/film.model';
+import { People } from '../models/people.model';
+import { Planet } from '../models/planet.model';
+import { Specie } from '../models/specie.model';
+import { Starship } from '../models/starship.model';
+import { Vehicle } from '../models/vehicle.model';
 
 const httpOptions = {
   headers: new HttpHeaders(
@@ -15,17 +21,17 @@ const httpOptions = {
 export class SwapiService {
 
   categories: string[] = ['films', 'people', 'planets', 'species', 'starships', 'vehicles'];
-  films: object[] = [];
+  films: Film[] = [];
   films_titles: string[] = [];
-  people: object[] = [];
+  people: People[] = [];
   people_names: string[] = [];
-  planets: object[] = [];
+  planets: Planet[] = [];
   planets_names: string[] = [];
-  species: object[] = [];
+  species: Specie[] = [];
   species_names: string[] = [];
-  starships: object[] = [];
+  starships: Starship[] = [];
   starships_names: string[] = [];
-  vehicles: object[] = [];
+  vehicles: Vehicle[] = [];
   vehicles_names: string[] = [];
 
   constructor(private http: HttpClient) { }
@@ -41,26 +47,35 @@ export class SwapiService {
     })
   }
 
-  getObjects(cat: string): object[] {
+  loadAll() {
+    this.loadItems(this.films, this.films_titles, 'https://swapi.dev/api/films/');
+    this.loadItems(this.people, this.people_names, 'https://swapi.dev/api/people/');
+    this.loadItems(this.planets, this.planets_names, 'https://swapi.dev/api/planets/');
+    this.loadItems(this.species, this.species_names, 'https://swapi.dev/api/species/');
+    this.loadItems(this.starships, this.starships_names, 'https://swapi.dev/api/starships/');
+    this.loadItems(this.vehicles, this.vehicles_names, 'https://swapi.dev/api/vehicles/');
+  }
+
+  getItems(cat: string): object[] {
     let objs: object[] = [];
     switch (cat) {
       case 'films':
-        objs = this.getFilms();
+        objs = this.films;
         break;
       case 'people':
-        objs = this.getPeople();
+        objs = this.people;
         break;
       case 'planets':
-        objs = this.getPlanets();
+        objs = this.planets;
         break;
       case 'species':
-        objs = this.getSpecies();
+        objs = this.species;
         break;
       case 'starships':
-        objs = this.getStarships();
+        objs = this.starships;
         break;
       case 'vehicles':
-        objs = this.getVehicles();
+        objs = this.vehicles;
     }
     return objs;
   }
@@ -69,27 +84,27 @@ export class SwapiService {
     let titles_or_names: string[] = [];
     switch (cat) {
       case 'films':
-        titles_or_names = this.getFilmsTitles();
+        titles_or_names = this.films_titles;
         break;
       case 'people':
-        titles_or_names = this.getPeopleNames();
+        titles_or_names = this.people_names;
         break;
       case 'planets':
-        titles_or_names = this.getPlanetsNames();
+        titles_or_names = this.planets_names;
         break;
       case 'species':
-        titles_or_names = this.getSpeciesNames();
+        titles_or_names = this.species_names;
         break;
       case 'starships':
-        titles_or_names = this.getStarshipsNames();
+        titles_or_names = this.starships_names;
         break;
       case 'vehicles':
-        titles_or_names = this.getVehiclesNames();
+        titles_or_names = this.vehicles_names;
     }
     return titles_or_names;
   }
 
-  getObject(cat: string, key: string): object {
+  getItem(cat: string, key: string): object {
     let obj: object = {};
     switch (cat) {
       case 'films':
@@ -113,75 +128,4 @@ export class SwapiService {
     return obj;
   }
 
-  getFilms(): object[] {
-    if (this.films.length === 0) {
-      this.loadItems(this.films, this.films_titles, 'https://swapi.dev/api/films/');
-    }
-    return this.films;
-  }
-
-  getFilmsTitles(): string[] {
-    this.getFilms();
-    return this.films_titles;
-  }
-
-  getPeople(): object[] {
-    if (this.people.length === 0) {
-      this.loadItems(this.people, this.people_names, 'https://swapi.dev/api/people/');
-    }
-    return this.people;
-  }
-
-  getPeopleNames(): string[] {
-    this.getPeople();
-    return this.people_names;
-  }
-
-  getPlanets(): object[] {
-    if (this.planets.length === 0) {
-      this.loadItems(this.planets, this.planets_names, 'https://swapi.dev/api/planets/');
-    }
-    return this.planets;
-  }
-
-  getPlanetsNames(): string[] {
-    this.getPlanets();
-    return this.planets_names;
-  }
-
-  getSpecies(): object[] {
-    if (this.species.length === 0) {
-      this.loadItems(this.species, this.species_names, 'https://swapi.dev/api/species/');
-    }
-    return this.species;
-  }
-
-  getSpeciesNames(): string[] {
-    this.getSpecies();
-    return this.species_names;
-  }
-
-  getStarships(): object[] {
-    if (this.starships.length === 0) {
-      this.loadItems(this.starships, this.starships_names, 'https://swapi.dev/api/starships/');
-    }
-    return this.starships;
-  }
-
-  getStarshipsNames(): string[] {
-    this.getStarships();
-    return this.starships_names;
-  }
-
-  getVehicles(): object[] {
-    if (this.vehicles.length === 0) {
-      this.loadItems(this.vehicles, this.vehicles_names, 'https://swapi.dev/api/vehicles/');
-    }
-    return this.vehicles;
-  }
-
-  getVehiclesNames(): string[] {
-    this.getVehicles();
-    return this.vehicles_names;
-  }
 }
