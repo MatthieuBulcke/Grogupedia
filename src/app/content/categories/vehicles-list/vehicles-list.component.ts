@@ -16,7 +16,7 @@ export class VehiclesListComponent implements OnInit {
 
   ngOnInit(): void {
   
-  this.vehicles=this.SwapiService.getVehicles();
+  this.vehicles=this.SwapiService.vehicles;
 
 }
 }

@@ -14,7 +14,7 @@ export class PlanetsListComponent implements OnInit {
 
   ngOnInit(): void {
   
-  this.planets=this.SwapiService.getPlanets();
+  this.planets=this.SwapiService.planets;
 
 }
 

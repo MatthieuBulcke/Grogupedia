@@ -14,6 +14,6 @@ export class SpeciesListComponent implements OnInit {
 
   ngOnInit(): void {
   
-  this.species=this.SwapiService.getSpecies();
+  this.species=this.SwapiService.species;
 }
 }

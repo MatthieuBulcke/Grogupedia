@@ -16,7 +16,7 @@ export class StarshipsListComponent implements OnInit {
 
   ngOnInit(): void {
   
-  this.starships=this.SwapiService.getStarships();
+  this.starships=this.SwapiService.starships;
 
 }
 }

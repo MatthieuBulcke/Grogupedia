@@ -15,7 +15,7 @@ export class FilmslistComponent implements OnInit {
 
   ngOnInit(): void {
   
-  this.films=this.SwapiService.getFilms();
+  this.films=this.SwapiService.films;
 
   }
 }
