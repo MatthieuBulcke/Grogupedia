@@ -7,9 +7,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-
   constructor(private http: HttpClient) {
-    this.loadPosts();
+    //this.loadPosts();
   }
 
   ngOnInit(): void {
@@ -60,6 +59,9 @@ export class NavComponent implements OnInit {
                 //console.log(planets);
                 for (let k = 0; k < planets.results.length; k++) {
                   this.planetsNames.push(planets.results[k].name);
+                  if (this.planetsNames.length == content.count) {
+                    this.planetsNames = this.planetsNames.sort();
+                  }
                 }
               });
             }
@@ -71,6 +73,9 @@ export class NavComponent implements OnInit {
                 //console.log(planets);
                 for (let k = 0; k < films.results.length; k++) {
                   this.filmsNames.push(films.results[k].title);
+                  if (this.filmsNames.length == content.count) {
+                    this.filmsNames = this.filmsNames.sort();
+                  }
                 }
               });
             }
@@ -82,6 +87,9 @@ export class NavComponent implements OnInit {
                 //console.log(planets);
                 for (let k = 0; k < species.results.length; k++) {
                   this.speciesNames.push(species.results[k].name);
+                  if (this.speciesNames.length == content.count) {
+                    this.speciesNames = this.speciesNames.sort();
+                  }
                 }
               });
             }
@@ -93,6 +101,9 @@ export class NavComponent implements OnInit {
                 //console.log(planets);
                 for (let k = 0; k < vehicles.results.length; k++) {
                   this.vehiclesNames.push(vehicles.results[k].name);
+                  if (this.vehiclesNames.length == content.count) {
+                    this.vehiclesNames = this.vehiclesNames.sort();
+                  }
                 }
               });
             }
@@ -104,6 +115,9 @@ export class NavComponent implements OnInit {
                 //console.log(planets);
                 for (let k = 0; k < starships.results.length; k++) {
                   this.starshipsNames.push(starships.results[k].name);
+                  if (this.starshipsNames.length == content.count) {
+                    this.starshipsNames = this.starshipsNames.sort();
+                  }
                 }
               });
             }
