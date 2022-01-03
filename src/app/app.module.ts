@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component'; import { NavComponent } from './nav-bar/nav/nav.component';
+import { ParentBarComponent } from './nav-bar/parent-bar/parent-bar.component';
+import { ChildBarComponent } from './nav-bar/parent-bar/child-bar/child-bar.component';
 import { HeaderComponent } from './content/header/header.component';
 import { SearchBarComponent } from './content/header/search-bar/search-bar.component';
 import { ContentComponent } from './content/content.component';
@@ -27,6 +29,8 @@ import { VehiclesListComponent } from './content/categories/vehicles-list/vehicl
     AppComponent,
     NavBarComponent,
     NavComponent,
+    ParentBarComponent,
+    ChildBarComponent,
     HeaderComponent,
     SearchBarComponent,
     ContentComponent,

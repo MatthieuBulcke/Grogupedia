@@ -1,7 +1,2 @@
 <img src="../../assets/images/star_wars_logo.png" alt="Logo Star Wars" />
-<div class=parentBar>Movies
-    <div class=childBar>Episode 1</div>
-</div>
-<div class=parentBar>Peoples
-    <div class=childBar>Luke</div>
-</div>
+<app-parent-bar *ngFor="let categorie of categories" [categorie]="categorie"></app-parent-bar>
