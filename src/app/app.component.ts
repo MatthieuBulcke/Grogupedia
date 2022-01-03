@@ -8,6 +8,9 @@ import { SwapiService } from './services/swapi.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+  title = 'grogupedia';
+
   constructor(private swapiservice: SwapiService/* private http: HttpClient */) {
     /* this.loadPosts(); */
   }
@@ -15,8 +18,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
       this.swapiservice.loadAll();
   }
- /*  title = 'grogupedia'; */
-
+  
   /*Variables stockées*/
  /*  cats: any = [];
   peoplesNames: any = [];
