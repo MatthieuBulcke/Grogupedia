@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { People } from 'src/app/models/people.model';
 import { SwapiService } from 'src/app/services/swapi.service';
 
 
@@ -9,13 +10,13 @@ import { SwapiService } from 'src/app/services/swapi.service';
 })
 export class PeopleListComponent implements OnInit {
 
-  people!:object[];
+  peoples!:People[];
 
   constructor(private SwapiService : SwapiService) {}
 
   ngOnInit(): void {
   
-  this.people=this.SwapiService.people;
+  this.peoples=this.SwapiService.people;
 
 }
 }

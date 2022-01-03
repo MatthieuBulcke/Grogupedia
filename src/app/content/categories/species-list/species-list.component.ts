@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Specie } from 'src/app/models/specie.model';
 import { SwapiService } from 'src/app/services/swapi.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { SwapiService } from 'src/app/services/swapi.service';
 })
 export class SpeciesListComponent implements OnInit {
 
-  species!:object[];
+  species!:Specie[];
 
   constructor(private SwapiService : SwapiService) {}
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Vehicle } from 'src/app/models/vehicle.model';
 import { SwapiService } from 'src/app/services/swapi.service';
 
 
@@ -9,8 +10,7 @@ import { SwapiService } from 'src/app/services/swapi.service';
 })
 export class VehiclesListComponent implements OnInit {
 
-  vehicles!: object[];
-
+  vehicles!: Vehicle[];
 
   constructor(private SwapiService: SwapiService) { }
 
