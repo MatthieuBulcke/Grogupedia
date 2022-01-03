@@ -47,7 +47,7 @@ export class SwapiService {
     })
   }
 
-  loadAll() {
+  loadAll(): void {
     this.loadItems(this.films, this.films_titles, 'https://swapi.dev/api/films/');
     this.loadItems(this.people, this.people_names, 'https://swapi.dev/api/people/');
     this.loadItems(this.planets, this.planets_names, 'https://swapi.dev/api/planets/');

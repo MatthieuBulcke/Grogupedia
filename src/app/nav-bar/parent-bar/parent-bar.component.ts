@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SwapiService } from 'src/app/services/swapi.service';
 
 @Component({

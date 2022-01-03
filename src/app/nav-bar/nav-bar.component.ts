@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SwapiService } from '../services/swapi.service';
 
 /* let parentSideBar = document.getElementById("parentBar");
@@ -13,10 +14,14 @@ export class NavBarComponent implements OnInit {
 
   categories!: string[];
 
-  constructor(private swapiservice: SwapiService) { }
+  constructor(private swapiservice: SwapiService, private routeur: Router) { }
 
   ngOnInit(): void {
     this.categories = this.swapiservice.categories;
+  }
+
+  onClick(cat: string) {
+    this.routeur.navigateByUrl(cat);
   }
 
 }
