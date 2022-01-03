@@ -9,14 +9,12 @@ import { SwapiService } from 'src/app/services/swapi.service';
 })
 export class VehiclesListComponent implements OnInit {
 
-  vehicles!:object[];
+  vehicles!: object[];
 
 
-  constructor(private SwapiService : SwapiService) {}
+  constructor(private SwapiService: SwapiService) { }
 
   ngOnInit(): void {
-  
-  this.vehicles=this.SwapiService.getVehicles();
-
-}
+    this.vehicles = this.SwapiService.vehicles;
+  }
 }
