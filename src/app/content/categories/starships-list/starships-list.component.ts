@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Starship } from 'src/app/models/starship.model';
 import { SwapiService } from 'src/app/services/swapi.service';
 
 
@@ -9,7 +10,7 @@ import { SwapiService } from 'src/app/services/swapi.service';
 })
 export class StarshipsListComponent implements OnInit {
 
-  starships!:object[];
+  starships!:Starship[];
 
 
   constructor(private SwapiService : SwapiService) {}
