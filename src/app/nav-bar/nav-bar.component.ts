@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SwapiService } from '../services/swapi.service';
 
-let parentSideBar = document.getElementById("parentBar");
-let childSideBar = document.getElementById("childBar");
+/* let parentSideBar = document.getElementById("parentBar");
+let childSideBar = document.getElementById("childBar"); */
 
 @Component({
   selector: 'app-nav-bar',
@@ -11,20 +11,12 @@ let childSideBar = document.getElementById("childBar");
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private service:SwapiService) { }
-  peoplesNames:any;
-  planetsNames:any;
-  filmsNames:any;
-  speciesNames:any;
-  vehiclesNames:any;
-  starshipsNames:any;
+  categories!: string[];
+
+  constructor(private swapiservice: SwapiService) { }
+
   ngOnInit(): void {
-    this.peoplesNames = this.service.getPeoplesNames();
-    this.planetsNames = this.service.getPlanetsNames();
-    this.filmsNames = this.service.getMoviesTitles();
-    this.speciesNames = this.service.getSpeciesNames();
-    this.vehiclesNames = this.service.getVehiclesNames();
-    this.starshipsNames = this.service.getStarshipsNames();
+    this.categories = this.swapiservice.categories;
   }
 
 }
@@ -40,7 +32,7 @@ export class NavBarComponent implements OnInit {
 //   }, 500);
 // }, false);
 
-window.addEventListener("click", display)
+/* window.addEventListener("click", display)
 
 function display(){
   let childSideBar = document.getElementsByClassName("childBar");
@@ -48,6 +40,6 @@ function display(){
    childSideBar[i].classList.toggle("display")
  }
  console.log(childSideBar)
-}
+} */
 
 

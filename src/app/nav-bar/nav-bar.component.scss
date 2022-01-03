@@ -1,5 +1,3 @@
-
-
 .navbar{
     position: fixed;
     top:0;
@@ -21,22 +19,14 @@
 }
 
 .parentBar{
-    margin: 0px;
-    padding: 0px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(169, 169, 169);
-
+    background-color: darkgray;
 }
 
 .childBar{
-    margin: 0px;
-    padding: 0px;
     display: none;
     background-color: darkgray;
-    
-    
-    
 }
 
 .display{

@@ -1,36 +1,33 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { SwapiService } from './services/swapi.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss']
 })
-export class AppComponent implements OnInit {
+export class NavComponent implements OnInit {
 
-  title = 'grogupedia';
-
-  constructor(private swapiservice: SwapiService/* private http: HttpClient */) {
+  constructor(private http: HttpClient) {
     /* this.loadPosts(); */
   }
 
   ngOnInit(): void {
-      this.swapiservice.loadAll();
   }
   
+
   /*Variables stockées*/
- /*  cats: any = [];
-  peoplesNames: any = [];
-  planetsNames: any = [];
-  filmsNames: any = [];
-  speciesNames: any = [];
-  vehiclesNames: any = [];
-  starshipsNames: any = []; */
+  cats: string[] = [];
+  peoplesNames: string[] = [];
+  planetsNames: string[] = [];
+  filmsNames: string[] = [];
+  speciesNames: string[] = [];
+  vehiclesNames: string[] = [];
+  starshipsNames: string[] = [];
 
 
 
-  /* loadPosts() {
+  loadPosts() {
     this.http.get('https://swapi.dev/api/').subscribe((cats) => {
       this.cats = Object.keys(cats);
       //console.log(this.cats);
@@ -116,9 +113,9 @@ export class AppComponent implements OnInit {
       // console.log(this.peoplesNames);
       // console.log(this.planetsNames);
       // console.log(this.filmsNames);
-     /*  console.log(this.speciesNames);
-      console.log(this.vehiclesNames);
-      console.log(this.starshipsNames); 
+      //console.log(this.speciesNames);
+      //console.log(this.vehiclesNames);
+      //console.log(this.starshipsNames);
     });
-  } */
+  }
 }
