@@ -1,38 +1,12 @@
-
-
-.navbar{
-    background-color: black;
-    position: fixed;
-    top:0;
-    bottom:0;
-    width: 200px;
-    height: 100vh;
-}
-
-.logo{
-    width: auto;
-    height: 120px;
-    margin: 0px;
-    padding: 0px;
-}
-
 .parentBar{
-    margin: 0px;
-    padding: 0px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(169, 169, 169);
-
+    background-color: darkgray;
 }
 
 .childBar{
-    margin: 0px;
-    padding: 0px;
     display: none;
     background-color: darkgray;
-    
-    
-    
 }
 
 .display{

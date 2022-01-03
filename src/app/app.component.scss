@@ -1,0 +1,12 @@
+app-nav-bar {
+    height: 100vh;
+    padding: 10px;
+    background-color: black;
+}
+
+app-content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: royalblue;
+}
