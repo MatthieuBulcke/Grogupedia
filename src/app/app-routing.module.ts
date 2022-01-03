@@ -6,8 +6,10 @@ import { PlanetsListComponent } from './content/categories/planets-list/planets-
 import { SpeciesListComponent } from './content/categories/species-list/species-list.component';
 import { StarshipsListComponent } from './content/categories/starships-list/starships-list.component';
 import { VehiclesListComponent } from './content/categories/vehicles-list/vehicles-list.component';
+import { HomeComponent } from './content/home/home.component';
 
 const routes: Routes = [
+    { path: '', component: HomeComponent},
     { path: 'films', component: FilmslistComponent },
     { path: 'people', component: PeopleListComponent },
     { path: 'planets', component: PlanetsListComponent },
