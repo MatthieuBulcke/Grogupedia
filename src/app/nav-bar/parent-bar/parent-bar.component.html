@@ -1,2 +1,2 @@
-<p>{{ categorie }}</p>
-<app-child-bar *ngFor="let name of names" [name]="name"></app-child-bar>
+<div><span (click)="onDisplayCategoryPage()">{{ categorie }}</span><span (click)="onDisplayChildBar()">+</span></div>
+<app-child-bar class="{{ categorie }}-child-bar" *ngFor="let name of names" [name]="name"></app-child-bar>

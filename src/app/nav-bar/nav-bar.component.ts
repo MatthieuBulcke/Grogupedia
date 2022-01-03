@@ -14,14 +14,10 @@ export class NavBarComponent implements OnInit {
 
   categories!: string[];
 
-  constructor(private swapiservice: SwapiService, private routeur: Router) { }
+  constructor(private swapiservice: SwapiService) { }
 
   ngOnInit(): void {
     this.categories = this.swapiservice.categories;
-  }
-
-  onClick(cat: string) {
-    this.routeur.navigateByUrl(cat);
   }
 
 }
