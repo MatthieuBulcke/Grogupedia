@@ -1,3 +1,23 @@
+.navbar{
+    position: fixed;
+    top:0;
+    bottom:0;
+    width: 200px;
+    height: 100vh;
+    background: url("../../assets/stars-back.jpg");
+    background-position: center;
+    background-size: cover;
+    color:white;
+    text-shadow: 2px 1px 2px rgb(44, 109, 250), 0 0 1em rgb(44, 109, 250), 0 0 0.2em rgb(44, 109, 250);
+}
+
+.logo{
+    width: auto;
+    height: 120px;
+    margin: 0px;
+    padding: 0px;
+}
+
 .parentBar{
     display: flex;
     flex-direction: column;
