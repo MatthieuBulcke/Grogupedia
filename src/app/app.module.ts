@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component'; import { NavComponent } from './nav-bar/nav/nav.component';
 import { ParentBarComponent } from './nav-bar/parent-bar/parent-bar.component';
 import { ChildBarComponent } from './nav-bar/parent-bar/child-bar/child-bar.component';
+import { ContentComponent } from './content/content.component';
+import { HomeComponent } from './content/home/home.component';
 import { HeaderComponent } from './content/header/header.component';
 import { SearchBarComponent } from './content/header/search-bar/search-bar.component';
-import { ContentComponent } from './content/content.component';
 import { FilmsComponent } from './content/categories/films-list/films/films.component';
 import { PeopleComponent } from './content/categories/people-list/people/people.component';
 import { PlanetsComponent } from './content/categories/planets-list/planets/planets.component';
@@ -24,16 +25,18 @@ import { SpeciesListComponent } from './content/categories/species-list/species-
 import { StarshipsListComponent } from './content/categories/starships-list/starships-list.component';
 import { VehiclesListComponent } from './content/categories/vehicles-list/vehicles-list.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     NavComponent,
+    ContentComponent,
+    HomeComponent,
     ParentBarComponent,
     ChildBarComponent,
     HeaderComponent,
     SearchBarComponent,
-    ContentComponent,
     FilmslistComponent,
     FilmsComponent,
     PeopleComponent,
