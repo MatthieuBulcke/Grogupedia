@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-species',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./species.component.scss']
 })
 export class SpeciesComponent implements OnInit {
+
+  @Input() planets!:object;
 
   name!: string;// -- The name of this species.
   classification!: string;// -- The classification of this species, such as "mammal" or "reptile".

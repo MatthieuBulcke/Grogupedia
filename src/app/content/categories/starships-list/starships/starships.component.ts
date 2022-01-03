@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-starships',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./starships.component.scss']
 })
 export class StarshipsComponent implements OnInit {
+
+  @Input() starships!:object;
+
 
   name!: string; // -- The name of this starship. The common name, such as "Death Star".
   model!: string;// -- The model or official name of this starship. Such as "T-65 X-wing" or "DS-1 Orbital Battle Station".

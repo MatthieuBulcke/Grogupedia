@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-planets',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./planets.component.scss']
 })
 export class PlanetsComponent implements OnInit {
+
+  @Input() planet!:object;
 
   name!: string;//- The name of this planet.
   diameter!: string;// -- The diameter of this planet in kilometers.

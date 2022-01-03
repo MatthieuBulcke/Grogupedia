@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-vehicles',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vehicles.component.scss']
 })
 export class VehiclesComponent implements OnInit {
+
+  @Input() starships!:object;
 
   name!: string; // -- The name of this vehicle. The common name, such as "Sand Crawler" or "Speeder bike".
   model!: string;// -- The model or official name of this vehicle. Such as "All-Terrain Attack Transport".
