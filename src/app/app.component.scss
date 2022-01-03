@@ -1,7 +1,10 @@
 app-nav-bar {
     height: 100vh;
     padding: 10px;
-    background-color: black;
+    overflow: auto;
+    background: url('../assets/images/stars-back.jpg');
+    background-position: center;
+    background-size: contain;
 }
 
 app-content {
