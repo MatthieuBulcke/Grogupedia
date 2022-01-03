@@ -11,13 +11,13 @@ import { ChildBarComponent } from './nav-bar/parent-bar/child-bar/child-bar.comp
 import { HeaderComponent } from './content/header/header.component';
 import { SearchBarComponent } from './content/header/search-bar/search-bar.component';
 import { ContentComponent } from './content/content.component';
-import { FilmsComponent } from './content/categories/filmslist/films/films.component';
+import { FilmsComponent } from './content/categories/films-list/films/films.component';
 import { PeopleComponent } from './content/categories/people-list/people/people.component';
 import { PlanetsComponent } from './content/categories/planets-list/planets/planets.component';
 import { SpeciesComponent } from './content/categories/species-list/species/species.component';
 import { StarshipsComponent } from './content/categories/starships-list/starships/starships.component';
 import { VehiclesComponent } from './content/categories/vehicles-list/vehicles/vehicles.component';
-import { FilmslistComponent } from './content/categories/filmslist/filmslist.component';
+import { FilmslistComponent } from './content/categories/films-list/films-list.component';
 import { PeopleListComponent } from './content/categories/people-list/people-list.component';
 import { PlanetsListComponent } from './content/categories/planets-list/planets-list.component';
 import { SpeciesListComponent } from './content/categories/species-list/species-list.component';
@@ -34,13 +34,13 @@ import { VehiclesListComponent } from './content/categories/vehicles-list/vehicl
     HeaderComponent,
     SearchBarComponent,
     ContentComponent,
+    FilmslistComponent,
     FilmsComponent,
     PeopleComponent,
     PlanetsComponent,
     SpeciesComponent,
     StarshipsComponent,
     VehiclesComponent,
-    FilmslistComponent,
     PeopleListComponent,
     PlanetsListComponent,
     SpeciesListComponent,
