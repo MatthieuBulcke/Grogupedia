@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwapiService } from '../services/swapi.service';
 
 let parentSideBar = document.getElementById("parentBar");
 let childSideBar = document.getElementById("childBar");
@@ -10,9 +11,20 @@ let childSideBar = document.getElementById("childBar");
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private service:SwapiService) { }
+  peoplesNames:any;
+  planetsNames:any;
+  filmsNames:any;
+  speciesNames:any;
+  vehiclesNames:any;
+  starshipsNames:any;
   ngOnInit(): void {
+    this.peoplesNames = this.service.getPeoplesNames();
+    this.planetsNames = this.service.getPlanetsNames();
+    this.filmsNames = this.service.getMoviesTitles();
+    this.speciesNames = this.service.getSpeciesNames();
+    this.vehiclesNames = this.service.getVehiclesNames();
+    this.starshipsNames = this.service.getStarshipsNames();
   }
 
 }
