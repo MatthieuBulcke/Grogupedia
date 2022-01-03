@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SwapiService } from 'src/app/services/swapi.service';
-import { FilmsComponent } from '../films/films.component';
+import { FilmsComponent } from './films/films.component';
 
 
 @Component({
