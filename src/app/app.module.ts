@@ -19,9 +19,9 @@ import { StarshipsComponent } from './content/categories/starships-list/starship
 import { VehiclesComponent } from './content/categories/vehicles-list/vehicles/vehicles.component';
 import { FilmslistComponent } from './content/categories/filmslist/filmslist.component';
 import { PeopleListComponent } from './content/categories/people-list/people-list.component';
-import { PlanetsListComponent } from './planets-list/planets-list.component';
-import { SpeciesListComponent } from './species-list/species-list.component';
-import { StarshipsListComponent } from './starships-list/starships-list.component';
+import { PlanetsListComponent } from './content/categories/planets-list/planets-list.component';
+import { SpeciesListComponent } from './content/categories/species-list/species-list.component';
+import { StarshipsListComponent } from './content/categories/starships-list/starships-list.component';
 import { VehiclesListComponent } from './content/categories/vehicles-list/vehicles-list.component';
 
 @NgModule({
