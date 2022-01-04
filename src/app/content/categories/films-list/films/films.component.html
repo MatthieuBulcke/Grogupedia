@@ -1,18 +1,30 @@
 <div class="page">
     <div class="card">
-        <div class="title"><h2>{{ this.film.title }}</h2></div>
-        <p>"Date Created: "+{{created}}</p> 
-        <p>"Realised by "+{{director}}</p>
-        <p>"Opening Crawl :"+{{opening_crawl}}</p>
-        </div>
+        <figure class="title">
+            <figcaption>{{ this.film.title }}</figcaption>
+            <img src="https://starwars-visualguide.com/assets/img/films/{{this.film.id}}.jpg" alt="{{this.film.id}}">
+        </figure>
+        <p>"Date Created: "+{{this.film.created}}</p>
+        <p>"Realised by "+{{this.film.director}}</p>
+        <p>"Opening Crawl :"+{{this.film.opening_crawl}}</p>
     </div>
-    <div class="card_list"><p>{{species}}</p></div>
-    <div class="card_list"><p>{{starships}}</p></div>
-    <div class="card_list"><p>{{vehicles}}</p></div>
-    <div class="card_list"><p>{{characters}}</p></div>
-    <div class="card_list"><p>{{{{planets}}</p></div>
-    <!-- <h3>{{episode_id}}</h3> -->
-    <!-- <p>{{edited}}</p> -->
-   <!-- <p>{{producer}}</p>
-    <p>{{release_date}}</p>  -->
 </div>
+<div class="card_list">
+    <p>{{this.film.species}}</p>
+</div>
+<div class="card_list">
+    <p>{{this.film.starships}}</p>
+</div>
+<div class="card_list">
+    <p>{{this.film.vehicles}}</p>
+</div>
+<div class="card_list">
+    <p>{{this.film.characters}}</p>
+</div>
+<div class="card_list">
+    <p>{{this.film.planets}}</p>
+</div>
+<!-- <h3>{{episode_id}}</h3> -->
+<!-- <p>{{edited}}</p> -->
+<!-- <p>{{producer}}</p>
+    <p>{{release_date}}</p>  -->
