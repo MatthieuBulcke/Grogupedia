@@ -14,12 +14,15 @@ export class NavBarComponent implements OnInit {
 
   categories!: string[];
 
-  constructor(private swapiservice: SwapiService) { }
+  constructor(private swapiservice: SwapiService, private routeur: Router) { }
 
   ngOnInit(): void {
     this.categories = this.swapiservice.categories;
   }
 
+  onGoHome(): void {
+    this.routeur.navigateByUrl('');
+  }
 }
 
 // parentSideBar addEventListener("mouseover", function( event ) {
