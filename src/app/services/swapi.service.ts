@@ -36,7 +36,7 @@ export class SwapiService {
 
   constructor(private http: HttpClient) { }
 
-  loadItems(elem: object[], elem_names: string[], url: string): void {
+  loadItems(elem: Film[] | People[] | Planet[] | Specie[] | Starship[] | Vehicle[], elem_names: string[], url: string): void {
     let items = this.http.get(url, httpOptions);
     items.subscribe((elements: any) => {
       for (let i = 0; i < elements.results.length; i++) {
@@ -57,8 +57,8 @@ export class SwapiService {
     this.loadItems(this.vehicles, this.vehicles_names, 'https://swapi.dev/api/vehicles/');
   }
 
-  getItems(cat: string): object[] {
-    let objs: object[] = [];
+  getItems(cat: string): Film[] | People[] | Planet[] | Specie[] | Starship[] | Vehicle[] {
+    let objs: Film[] | People[] | Planet[] | Specie[] | Starship[] | Vehicle[] = [];
     switch (cat) {
       case 'films':
         objs = this.films;
@@ -81,7 +81,7 @@ export class SwapiService {
     return objs;
   }
 
-  getNames(cat: string) {
+  getNames(cat: string): string[] {
     let titles_or_names: string[] = [];
     switch (cat) {
       case 'films':
@@ -105,8 +105,8 @@ export class SwapiService {
     return titles_or_names;
   }
 
-  getItem(cat: string, key: string): object {
-    let obj: object = {};
+  getItem(cat: string, key: string): Film | People | Planet | Specie | Starship | Vehicle | null {
+    let obj: Film | People | Planet | Specie | Starship | Vehicle | null = null;
     switch (cat) {
       case 'films':
         this.films.forEach((element: any) => { if (element.title === key) obj = element });

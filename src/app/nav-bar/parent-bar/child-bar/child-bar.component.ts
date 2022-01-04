@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SwapiService } from 'src/app/services/swapi.service';
 
 @Component({
   selector: 'app-child-bar',
@@ -11,12 +12,12 @@ export class ChildBarComponent implements OnInit {
   @Input() categorie!: string;
   @Input() name!: string;
 
-  constructor(private routeur: Router) { }
+  constructor(private swapiservice: SwapiService, private routeur: Router) { }
 
   ngOnInit(): void {
   }
 
   onView() {
-    this.routeur.navigateByUrl(`${this.categorie}/${this.name}`);
+    this.routeur.navigateByUrl(`${this.categorie}/${this.swapiservice.getItem(this.categorie, this.name)?.id}`);
   }
 }
