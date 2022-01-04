@@ -3,3 +3,9 @@ app-header {
     padding-right: 10px;
     background-color: green;
 }
+
+app-vehicles-list{
+    display:flex;  
+    flex-wrap: wrap;
+
+}
