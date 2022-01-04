@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { SwapiService } from './services/swapi.service';
 
@@ -9,7 +8,7 @@ import { SwapiService } from './services/swapi.service';
 })
 export class AppComponent implements OnInit {
 
-  title = 'grogupedia';
+  title = 'Grogupedia';
 
   constructor(private swapiservice: SwapiService/* private http: HttpClient */) {
     /* this.loadPosts(); */

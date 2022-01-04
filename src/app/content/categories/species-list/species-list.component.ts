@@ -11,10 +11,10 @@ export class SpeciesListComponent implements OnInit {
 
   species!:Specie[];
 
-  constructor(private SwapiService : SwapiService) {}
+  constructor(private swapiservice : SwapiService) {}
 
   ngOnInit(): void {
   
-  this.species=this.SwapiService.species;
+  this.species=this.swapiservice.species;
 }
 }

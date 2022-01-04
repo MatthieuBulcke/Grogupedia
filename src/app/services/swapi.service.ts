@@ -41,7 +41,7 @@ export class SwapiService {
     items.subscribe((elements: any) => {
       for (let i = 0; i < elements.results.length; i++) {
         let url_split = elements.results[i].url.split('/');
-        elements.results[i].id = url_split[url_split.length - 2];
+        elements.results[i].id = parseInt(url_split[url_split.length - 2]);
         elem.push(elements.results[i]);
         elements.results[i].title ? elem_names.push(elements.results[i].title) : elem_names.push(elements.results[i].name);
       }
@@ -59,7 +59,7 @@ export class SwapiService {
   }
 
   getItems(cat: string): Film[] | People[] | Planet[] | Specie[] | Starship[] | Vehicle[] {
-    let objs: Film[] | People[] | Planet[] | Specie[] | Starship[] | Vehicle[] = [];
+    let objs!: Film[] | People[] | Planet[] | Specie[] | Starship[] | Vehicle[];
     switch (cat) {
       case 'films':
         objs = this.films;
@@ -83,73 +83,73 @@ export class SwapiService {
   }
 
   getNames(cat: string): string[] {
-    let titles_or_names: string[] = [];
+    let names!: string[];
     switch (cat) {
       case 'films':
-        titles_or_names = this.films_titles;
+        names = this.films_titles;
         break;
       case 'people':
-        titles_or_names = this.people_names;
+        names = this.people_names;
         break;
       case 'planets':
-        titles_or_names = this.planets_names;
+        names = this.planets_names;
         break;
       case 'species':
-        titles_or_names = this.species_names;
+        names = this.species_names;
         break;
       case 'starships':
-        titles_or_names = this.starships_names;
+        names = this.starships_names;
         break;
       case 'vehicles':
-        titles_or_names = this.vehicles_names;
+        names = this.vehicles_names;
     }
-    return titles_or_names;
+    return names;
   }
 
-  getItem(cat: string, key: string): Film | People | Planet | Specie | Starship | Vehicle | null {
-    let obj: Film | People | Planet | Specie | Starship | Vehicle | null = null;
+  getItem(cat: string, key: string): Film | People | Planet | Specie | Starship | Vehicle {
+    let obj!: Film | People | Planet | Specie | Starship | Vehicle;
     switch (cat) {
       case 'films':
-        this.films.forEach((element: any) => { if (element.title === key) obj = element });
+        this.films.forEach((element: Film) => { if (element.title === key) obj = element });
         break;
       case 'people':
-        this.people.forEach((element: any) => { if (element.name === key) obj = element });
+        this.people.forEach((element: People) => { if (element.name === key) obj = element });
         break;
       case 'planets':
-        this.planets.forEach((element: any) => { if (element.name === key) obj = element });
+        this.planets.forEach((element: Planet) => { if (element.name === key) obj = element });
         break;
       case 'species':
-        this.species.forEach((element: any) => { if (element.name === key) obj = element });
+        this.species.forEach((element: Specie) => { if (element.name === key) obj = element });
         break;
       case 'starships':
-        this.starships.forEach((element: any) => { if (element.name === key) obj = element });
+        this.starships.forEach((element: Starship) => { if (element.name === key) obj = element });
         break;
       case 'vehicles':
-        this.vehicles.forEach((element: any) => { if (element.name === key) obj = element });
+        this.vehicles.forEach((element: Vehicle) => { if (element.name === key) obj = element });
     }
     return obj;
   }
 
   getItemById(cat: string, id: number): Film | People | Planet | Specie | Starship | Vehicle | null {
-    let obj: Film | People | Planet | Specie | Starship | Vehicle | null = null;
+    let obj!: Film | People | Planet | Specie | Starship | Vehicle;
     switch (cat) {
       case 'films':
-        this.films.forEach((element: any) => { if (element.id === id) obj = element });
+        this.films.forEach((element: Film): void => { if (element.id === id) obj = element });
         break;
       case 'people':
-        this.people.forEach((element: any) => { if (element.id === id) obj = element });
+        this.people.forEach((element: People): void => { if (element.id === id) obj = element });
         break;
       case 'planets':
-        this.planets.forEach((element: any) => { if (element.id === id) obj = element });
+        this.planets.forEach((element: Planet): void => { if (element.id === id) obj = element });
         break;
       case 'species':
-        this.species.forEach((element: any) => { if (element.id === id) obj = element });
+        this.species.forEach((element: Specie): void => { if (element.id === id) obj = element });
         break;
       case 'starships':
-        this.starships.forEach((element: any) => { if (element.id === id) obj = element });
+        this.starships.forEach((element: Starship): void => { if (element.id === id) obj = element });
         break;
       case 'vehicles':
-        this.vehicles.forEach((element: any) => { if (element.id === id) obj = element });
+        this.vehicles.forEach((element: Vehicle): void => { if (element.id === id) obj = element });
     }
     return obj;
   }

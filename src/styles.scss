@@ -10,53 +10,63 @@
 
 body {
     margin:0;
-    text-transform: lowercase;
-    font-family: "Stars",sans-serif;
-    color: whitesmoke;
     overflow: hidden;
+    font-family: "Stars",sans-serif;
+    text-transform: lowercase;
+    color: whitesmoke; 
 }
-/*SCROLL-BARS*/
-/*SCROLLBARS*/
-::-webkit-scrollbar{
+
+app-root {
+    display: flex;
+}
+
+/* LISTS */
+.list {
+    height: 92.4vh;
+    padding-bottom: 20px;
+    overflow: auto;
+    background: url('./assets/images/stars-back.jpg');
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* FIGURES */
+figure {
+    padding: 5px;
+    background-color: black;
+    color: #FFE81F;
+    border : 3px solid #FFE81F;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.single {
+    width:10em;
+    height:20em;
+}
+
+.single img {
+    width: 100%;
+}
+
+/* SCROLL-BARS */
+::-webkit-scrollbar {
     margin:.5em;
     height:18px;
     width:36px;
     background:url("./assets/images/Saber.png");
     border-radius:40%;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: url('./assets/images/LightSaber-4.png');
     background-size: cover;
     min-height:12em;
     max-height: 12em;
     border-radius:1em;
 }
-::-webkit-scrollbar-corner{
-    background:#000;
-}
 
-app-root {
-    display: flex;
-}
-figure{
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items	:center;
-    align-content:center;	
-    border : 3px solid #FFE81F;
-    border-radius: 5%;
-    // width: 400px;
-    // height: 300px;
-    color: #FFE81F;
-    filter: brightness(150%);
-    padding: 5px;
-}
-.single{
-    width:10em;
-    height:20em;
-}
-.single img{
-    width: 100%;
+::-webkit-scrollbar-corner {
+    background:#000;
 }

@@ -1,4 +1,3 @@
-import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SwapiService } from 'src/app/services/swapi.service';

@@ -12,9 +12,9 @@ export class VehiclesListComponent implements OnInit {
 
   vehicles!: Vehicle[];
 
-  constructor(private SwapiService: SwapiService) { }
+  constructor(private swapiservice: SwapiService) { }
 
   ngOnInit(): void {
-    this.vehicles = this.SwapiService.vehicles;
+    this.vehicles = this.swapiservice.vehicles;
   }
 }

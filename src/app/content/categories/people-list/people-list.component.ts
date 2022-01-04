@@ -10,13 +10,11 @@ import { SwapiService } from 'src/app/services/swapi.service';
 })
 export class PeopleListComponent implements OnInit {
 
-  peoples!:People[];
+  peoples!: People[];
 
-  constructor(private SwapiService : SwapiService) {}
+  constructor(private swapiservice: SwapiService) { }
 
   ngOnInit(): void {
-  
-  this.peoples=this.SwapiService.people;
-
-}
+    this.peoples = this.swapiservice.people;
+  }
 }
