@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-child-bar',
@@ -7,11 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ChildBarComponent implements OnInit {
 
+  @Input() categorie!: string;
   @Input() name!: string;
 
-  constructor() { }
+  constructor(private routeur: Router) { }
 
   ngOnInit(): void {
   }
 
+  onView() {
+    this.routeur.navigateByUrl(`${this.categorie}/${this.name}`);
+  }
 }

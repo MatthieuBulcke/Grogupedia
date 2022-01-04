@@ -24,6 +24,12 @@ import { PlanetsListComponent } from './content/categories/planets-list/planets-
 import { SpeciesListComponent } from './content/categories/species-list/species-list.component';
 import { StarshipsListComponent } from './content/categories/starships-list/starships-list.component';
 import { VehiclesListComponent } from './content/categories/vehicles-list/vehicles-list.component';
+import { SingleFilmComponent } from './content/categories/films-list/films/single-film/single-film.component';
+import { SinglePeopleComponent } from './content/categories/people-list/people/single-people/single-people.component';
+import { SinglePlanetComponent } from './content/categories/planets-list/planets/single-planet/single-planet.component';
+import { SingleSpecieComponent } from './content/categories/species-list/species/single-specie/single-specie.component';
+import { SingleStarshipComponent } from './content/categories/starships-list/starships/single-starship/single-starship.component';
+import { SingleVehicleComponent } from './content/categories/vehicles-list/vehicles/single-vehicle/single-vehicle.component';
 
 
 @NgModule({
@@ -48,7 +54,13 @@ import { VehiclesListComponent } from './content/categories/vehicles-list/vehicl
     PlanetsListComponent,
     SpeciesListComponent,
     StarshipsListComponent,
-    VehiclesListComponent
+    VehiclesListComponent,
+    SingleFilmComponent,
+    SinglePeopleComponent,
+    SinglePlanetComponent,
+    SingleSpecieComponent,
+    SingleStarshipComponent,
+    SingleVehicleComponent
   ],
   imports: [
     BrowserModule,
