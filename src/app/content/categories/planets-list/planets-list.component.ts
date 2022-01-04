@@ -9,14 +9,12 @@ import { SwapiService } from 'src/app/services/swapi.service';
 })
 export class PlanetsListComponent implements OnInit {
 
-  planets!:Planet[];
+  planets!: Planet[];
 
-  constructor(private SwapiService : SwapiService) {}
+  constructor(private swapiservice: SwapiService) { }
 
   ngOnInit(): void {
-  
-  this.planets=this.SwapiService.planets;
-
-}
+    this.planets = this.swapiservice.planets;
+  }
 
 }

@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SwapiService } from '../services/swapi.service';
 
-/* let parentSideBar = document.getElementById("parentBar");
-let childSideBar = document.getElementById("childBar"); */
-
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',

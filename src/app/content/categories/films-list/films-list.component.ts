@@ -7,9 +7,6 @@ import { SwapiService } from 'src/app/services/swapi.service';
   templateUrl: './films-list.component.html',
   styleUrls: ['./films-list.component.scss']
 })
-
-
-
 export class FilmslistComponent implements OnInit {
 
   films!: Film[];

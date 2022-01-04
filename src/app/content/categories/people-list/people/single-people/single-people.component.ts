@@ -9,13 +9,12 @@ import { People } from 'src/app/models/people.model';
 })
 export class SinglePeopleComponent implements OnInit {
 
-  people!:People;
+  people!: People;
 
   constructor(private swapiservice: SwapiService) { }
 
   ngOnInit(): void {
-    //Rècupère la catégorie et l'id
-    let content = document.URL.split('/')
+    let content = document.URL.split('/');
     this.people = this.swapiservice.getItemById(content[3], parseInt(content[4])) as People;
   }
 

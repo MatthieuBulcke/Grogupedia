@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Vehicle } from 'src/app/models/vehicle.model';
+import { SwapiService } from 'src/app/services/swapi.service';
 
 @Component({
   selector: 'app-single-vehicle',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingleVehicleComponent implements OnInit {
 
-  constructor() { }
+  vehicle!: Vehicle;
+
+  constructor(private swapiservice: SwapiService) { }
 
   ngOnInit(): void {
+    let content = document.URL.split('/');
+    this.vehicle = this.swapiservice.getItemById(content[3], parseInt(content[4])) as Vehicle;
   }
 
 }

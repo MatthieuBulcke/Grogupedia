@@ -1,8 +1,9 @@
-p{
-    user-select: none;
-    cursor: pointer;
+p {
+    user-select: none;  
 }
-p:hover{
+
+p:hover {
+    cursor: pointer;
     text-shadow: 2px 1px 2px rgb(44, 250, 137), 0 0 1em rgb(44, 250, 137), 0 0 0.2em rgb(44, 250, 137);
     animation:glow 1s infinite;
 }

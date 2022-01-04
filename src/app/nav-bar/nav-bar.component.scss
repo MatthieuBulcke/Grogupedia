@@ -1,11 +1,12 @@
-img{
-    margin: auto;
-}
-@keyframes glow{
-    50%{
+@keyframes glow {
+    50% {
         text-shadow: -2px -1px 5px rgb(44, 250, 137), 0 0 1em rgb(44, 250, 137), 0 0 0.2em rgb(44, 250, 137);
     }
-    75%{
+    75% {
         text-shadow: 2px 1px 3px rgb(44, 250, 137), 0 0 1em rgb(44, 250, 137), 0 0 0.2em rgb(44, 250, 137);
     }
+}
+
+img {
+    margin: 0 auto;
 }

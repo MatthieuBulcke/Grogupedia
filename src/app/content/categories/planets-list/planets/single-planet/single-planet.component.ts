@@ -9,13 +9,12 @@ import { Planet } from 'src/app/models/planet.model';
 })
 export class SinglePlanetComponent implements OnInit {
 
-  planet!:Planet;
+  planet!: Planet;
 
   constructor(private swapiservice: SwapiService) { }
 
   ngOnInit(): void {
-    //Rècupère la catégorie et l'id
-    let content = document.URL.split('/')
+    let content = document.URL.split('/');
     this.planet = this.swapiservice.getItemById(content[3], parseInt(content[4])) as Planet;
   }
 

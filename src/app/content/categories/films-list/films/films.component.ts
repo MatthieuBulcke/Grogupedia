@@ -20,7 +20,6 @@ export class FilmsComponent implements OnInit {
   onView(): void {
     let url_split = document.URL.split('/');
     let category = url_split[url_split.length - 1];
-    console.log(category);
     this.routeur.navigateByUrl(`${category}/${this.film.id}`);
   }
 }

@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component'; import { NavComponent } from './nav-bar/nav/nav.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ParentBarComponent } from './nav-bar/parent-bar/parent-bar.component';
 import { ChildBarComponent } from './nav-bar/parent-bar/child-bar/child-bar.component';
 import { ContentComponent } from './content/content.component';
@@ -36,7 +36,6 @@ import { SingleVehicleComponent } from './content/categories/vehicles-list/vehic
   declarations: [
     AppComponent,
     NavBarComponent,
-    NavComponent,
     ContentComponent,
     HomeComponent,
     ParentBarComponent,
