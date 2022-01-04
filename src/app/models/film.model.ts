@@ -1,4 +1,5 @@
 export class Film {
+    id!: number;
     title!: String;
     episode_id!: Number;
     opening_crawl!: String;

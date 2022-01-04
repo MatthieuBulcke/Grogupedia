@@ -40,6 +40,7 @@ export class SwapiService {
     let items = this.http.get(url, httpOptions);
     items.subscribe((elements: any) => {
       for (let i = 0; i < elements.results.length; i++) {
+        elements.results[i].id = i + 1;
         elem.push(elements.results[i]);
         elements.results[i].title ? elem_names.push(elements.results[i].title) : elem_names.push(elements.results[i].name);
       }
