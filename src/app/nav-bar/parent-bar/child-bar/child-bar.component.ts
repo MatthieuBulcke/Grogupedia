@@ -18,6 +18,7 @@ export class ChildBarComponent implements OnInit {
   }
 
   onView() {
-    this.routeur.navigateByUrl(`${this.categorie}/${this.swapiservice.getItem(this.categorie, this.name)?.id}`);
+    this.routeur.navigateByUrl('', { skipLocationChange: true }).then(() =>
+      this.routeur.navigateByUrl(`${this.categorie}/${this.swapiservice.getItem(this.categorie, this.name)?.id}`));
   }
 }
