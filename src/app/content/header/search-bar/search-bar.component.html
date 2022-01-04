@@ -1,1 +1,5 @@
-<p>search-bar works!</p>
+<input list="datas" type="text" placeholder="Search...">
+<datalist id="datas">
+    <option *ngFor="let people of this.people_names"  value="{{people}}"></option>
+    <option *ngFor="let film of this.film_titles" value="{{film}}"></option>
+</datalist>
