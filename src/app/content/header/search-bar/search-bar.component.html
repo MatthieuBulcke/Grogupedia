@@ -1,5 +1,10 @@
-<input list="datas" type="text" placeholder="Search...">
+<input list="datas" type="text" placeholder="Search..." spellcheck="false">
 <datalist id="datas">
     <option *ngFor="let people of this.people_names"  value="{{people}}"></option>
     <option *ngFor="let film of this.film_titles" value="{{film}}"></option>
+    <option *ngFor="let planets of this.planet_names" value="{{planets}}"></option>
+    <option *ngFor="let species of this.species_names" value="{{species}}"></option>
+    <option *ngFor="let starships of this.starships_names" value="{{starships}}"></option>
+    <option *ngFor="let vehicles of this.vehicles_names" value="{{vehicles}}"></option>
 </datalist>
+<button>Search</button>
