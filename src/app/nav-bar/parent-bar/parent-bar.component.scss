@@ -11,3 +11,8 @@ app-child-bar {
 .hide {
     display: none;
 }
+span{
+    user-select: none;
+    cursor: pointer;
+    animation:glow 1s infinite;
+}
