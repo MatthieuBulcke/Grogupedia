@@ -10,10 +10,12 @@ export class SingleFilmComponent implements OnInit {
 
   constructor(private swapiservice: SwapiService) { }
 
+  film:any;
   ngOnInit(): void {
     //Rècupère la catégorie et l'id
     let content = document.URL.split('/')
-    this.swapiservice.getItemById(content[3],parseInt(content[4]));
+    this.film = this.swapiservice.getItemById(content[3],parseInt(content[4]));
+    console.log(this.swapiservice.getItemById(content[3],parseInt(content[4])));
   }
 
 }
