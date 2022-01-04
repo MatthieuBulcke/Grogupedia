@@ -14,5 +14,8 @@ app-child-bar {
 span{
     user-select: none;
     cursor: pointer;
+}
+span:hover{
+    text-shadow: 2px 1px 2px rgb(44, 250, 137), 0 0 1em rgb(44, 250, 137), 0 0 0.2em rgb(44, 250, 137);
     animation:glow 1s infinite;
 }
