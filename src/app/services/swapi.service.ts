@@ -36,25 +36,26 @@ export class SwapiService {
 
   constructor(private http: HttpClient) { }
 
-  loadItems(id: number, elem: Film[] | People[] | Planet[] | Specie[] | Starship[] | Vehicle[], elem_names: string[], url: string): void {
+  loadItems(elem: Film[] | People[] | Planet[] | Specie[] | Starship[] | Vehicle[], elem_names: string[], url: string): void {
     let items = this.http.get(url, httpOptions);
     items.subscribe((elements: any) => {
       for (let i = 0; i < elements.results.length; i++) {
-        elements.results[i].id = id++;
+        let url_split = elements.results[i].url.split('/');
+        elements.results[i].id = url_split[url_split.length - 2];
         elem.push(elements.results[i]);
         elements.results[i].title ? elem_names.push(elements.results[i].title) : elem_names.push(elements.results[i].name);
       }
-      if (elements.next) this.loadItems(id, elem, elem_names, elements.next);
+      if (elements.next) this.loadItems(elem, elem_names, elements.next);
     })
   }
 
   loadAll(): void {
-    this.loadItems(1, this.films, this.films_titles, 'https://swapi.dev/api/films/');
-    this.loadItems(1, this.people, this.people_names, 'https://swapi.dev/api/people/');
-    this.loadItems(1, this.planets, this.planets_names, 'https://swapi.dev/api/planets/');
-    this.loadItems(1, this.species, this.species_names, 'https://swapi.dev/api/species/');
-    this.loadItems(1, this.starships, this.starships_names, 'https://swapi.dev/api/starships/');
-    this.loadItems(1, this.vehicles, this.vehicles_names, 'https://swapi.dev/api/vehicles/');
+    this.loadItems(this.films, this.films_titles, 'https://swapi.dev/api/films/');
+    this.loadItems(this.people, this.people_names, 'https://swapi.dev/api/people/');
+    this.loadItems(this.planets, this.planets_names, 'https://swapi.dev/api/planets/');
+    this.loadItems(this.species, this.species_names, 'https://swapi.dev/api/species/');
+    this.loadItems(this.starships, this.starships_names, 'https://swapi.dev/api/starships/');
+    this.loadItems(this.vehicles, this.vehicles_names, 'https://swapi.dev/api/vehicles/');
   }
 
   getItems(cat: string): Film[] | People[] | Planet[] | Specie[] | Starship[] | Vehicle[] {
