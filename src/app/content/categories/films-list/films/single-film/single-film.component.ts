@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwapiService } from 'src/app/services/swapi.service';
 
 @Component({
   selector: 'app-single-film',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingleFilmComponent implements OnInit {
 
-  constructor() { }
+  constructor(private swapiservice: SwapiService) { }
 
   ngOnInit(): void {
+    //Rècupère la catégorie et l'id
+    let content = document.URL.split('/')
+    this.swapiservice.getItemById(content[3],content[4]);
   }
 
 }
