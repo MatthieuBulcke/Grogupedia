@@ -1,1 +1,19 @@
-<p>single-planet works!</p>
+<figure class="card single">
+    <figcaption>{{this.planet.name}}</figcaption>
+    <img src="https://starwars-visualguide.com/assets/img/planets/{{this.planet.id}}.jpg" alt="{{this.planet.name}}">
+</figure>
+<div class="peopleDatas">
+    <p>{{this.planet.name}}</p>
+    <p>Diameter: {{this.planet.diameter}}</p>
+    <p>Rotation period: {{this.planet.rotation_period}}</p>
+    <p>Orbital period: {{this.planet.orbital_period}}</p>
+    <p>Gravity: {{this.planet.gravity}}</p>
+    <p>Population: {{this.planet.population}}</p>
+    <p>Climate: {{this.planet.climate}}</p>
+    <p>Terrain: {{this.planet.terrain}}</p>
+    <p>Water surface: {{this.planet.surface_water}}</p>
+    <p>Residents: {{this.planet.residents}}</p>
+    <p>Films: {{this.planet.films}}</p>
+    <p>Creation: {{this.planet.created}}</p>
+    <p>Edition: {{this.planet.edited}}</p>
+</div>
