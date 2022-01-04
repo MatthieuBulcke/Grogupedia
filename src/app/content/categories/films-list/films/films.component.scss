@@ -7,14 +7,17 @@ figure{
     align-content:center;	
     border : 3px solid #FFE81F;
     border-radius: 5%;
-    width: 400px;
-    height: 300px;
+    // width: 400px;
+    // height: 300px;
     color: #FFE81F;
     filter: brightness(150%);
-    padding-bottom: 5px;
+    padding: 5px;
 }
 
 img{
-    width: 80%;
+    // width: 90%;
     overflow: none;
+    
+    width: 400px; 
+    height: auto;
 }
