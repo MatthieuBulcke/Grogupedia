@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SwapiService } from '../services/swapi.service';
 
 /* let parentSideBar = document.getElementById("parentBar");
