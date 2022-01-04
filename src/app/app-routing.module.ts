@@ -17,17 +17,17 @@ import { HomeComponent } from './content/home/home.component';
 const routes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'films', component: FilmslistComponent },
-    { path: 'films/:title', component: SingleFilmComponent },
+    { path: 'films/:id', component: SingleFilmComponent },
     { path: 'people', component: PeopleListComponent },
-    { path: 'people/:name', component: SinglePeopleComponent },
+    { path: 'people/:id', component: SinglePeopleComponent },
     { path: 'planets', component: PlanetsListComponent },
-    { path: 'planets/:name', component: SinglePlanetComponent },
+    { path: 'planets/:id', component: SinglePlanetComponent },
     { path: 'species', component: SpeciesListComponent },
-    { path: 'species/:name', component: SingleSpecieComponent },
+    { path: 'species/:id', component: SingleSpecieComponent },
     { path: 'starships', component: StarshipsListComponent },
-    { path: 'starships/:name', component: SingleStarshipComponent },
+    { path: 'starships/:id', component: SingleStarshipComponent },
     { path: 'vehicles', component: VehiclesListComponent },
-    { path: 'vehicles/:name', component: SingleVehicleComponent }
+    { path: 'vehicles/:id', component: SingleVehicleComponent }
 ];
 
 @NgModule({
