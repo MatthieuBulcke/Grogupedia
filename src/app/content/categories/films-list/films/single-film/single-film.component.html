@@ -1,4 +1,15 @@
-<figure class="card">
+<figure class="card single">
     <figcaption>{{this.film.title}}</figcaption>
     <img src="https://starwars-visualguide.com/assets/img/films/{{this.film.id}}.jpg" alt="{{this.film.title}}">
 </figure>
+<div class="filmDatas">
+    <p>Producer: {{this.film.producer}}</p>
+    <p>Director: {{this.film.director}}</p>
+    <p>Creation date: {{this.film.created}}</p>
+    <p>Edition date: {{this.film.edited}}</p>
+    <p>Release date: {{this.film.release_date}}</p>
+    <p>Episodes: {{this.film.episode_id}}</p>
+    <p>Introduction: {{this.film.opening_crawl}}</p>
+    <p>Espèces: {{this.film.species}}</p>
+    <p>Véhicules: {{this.film.vehicles}}</p>
+</div>

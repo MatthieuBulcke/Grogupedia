@@ -38,3 +38,25 @@ body {
 app-root {
     display: flex;
 }
+figure{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items	:center;
+    align-content:center;	
+    border : 3px solid #FFE81F;
+    border-radius: 5%;
+    // width: 400px;
+    // height: 300px;
+    color: #FFE81F;
+    filter: brightness(150%);
+    padding: 5px;
+}
+.single{
+    width:10em;
+    height:20em;
+}
+.single img{
+    width: 100%;
+}
