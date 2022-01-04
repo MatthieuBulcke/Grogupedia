@@ -20,19 +20,21 @@ body {
 ::-webkit-scrollbar{
     margin:.5em;
     height:16px;
-    width:16px;
+    width:32px;
     background:url("./assets/images/Saber.png");
     border-radius:1em;
 }
 ::-webkit-scrollbar-thumb{
     background: url('./assets/images/LightSaber-4.png');
     background-size: cover;
-    min-height:7em;
+    min-height:12em;
+    max-height: 12em;
     border-radius:1em;
 }
 ::-webkit-scrollbar-corner{
     background:#000;
 }
+
 app-root {
     display: flex;
 }
