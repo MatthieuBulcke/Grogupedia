@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, } from '@angular/core';
+import { Router } from '@angular/router';
 import { Film } from 'src/app/models/film.model';
 
 @Component({
@@ -11,8 +12,15 @@ export class FilmsComponent implements OnInit {
 
   @Input() film!: Film;
 
-  constructor() { }
+  constructor(private routeur: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onView(): void {
+    let url_split = document.URL.split('/');
+    let category = url_split[url_split.length - 1];
+    console.log(category);
+    this.routeur.navigateByUrl(`${category}/${this.film.id}`);
   }
 }

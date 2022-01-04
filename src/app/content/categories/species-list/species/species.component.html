@@ -1,4 +1,4 @@
-<figure class="card">
+<figure class="card" (click)="onView()">
     <figcaption>{{ this.specie.name }}</figcaption>
     <img src="https://starwars-visualguide.com/assets/img/species/{{this.specie.id}}.jpg" alt="{{this.specie.id}}" onerror="this.onerror=null;this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg';">
 </figure>
