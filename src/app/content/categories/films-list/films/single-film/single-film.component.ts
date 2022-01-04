@@ -13,7 +13,7 @@ export class SingleFilmComponent implements OnInit {
   ngOnInit(): void {
     //Rècupère la catégorie et l'id
     let content = document.URL.split('/')
-    this.swapiservice.getItemById(content[3],content[4]);
+    this.swapiservice.getItemById(content[3],parseInt(content[4]));
   }
 
 }
