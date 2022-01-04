@@ -129,4 +129,28 @@ export class SwapiService {
     return obj;
   }
 
+  getItemById(cat: string, id: number): Film | People | Planet | Specie | Starship | Vehicle | null {
+    let obj: Film | People | Planet | Specie | Starship | Vehicle | null = null;
+    switch (cat) {
+      case 'films':
+        this.films.forEach((element: any) => { if (element.id === id) obj = element });
+        break;
+      case 'people':
+        this.people.forEach((element: any) => { if (element.id === id) obj = element });
+        break;
+      case 'planets':
+        this.planets.forEach((element: any) => { if (element.id === id) obj = element });
+        break;
+      case 'species':
+        this.species.forEach((element: any) => { if (element.id === id) obj = element });
+        break;
+      case 'starships':
+        this.starships.forEach((element: any) => { if (element.id === id) obj = element });
+        break;
+      case 'vehicles':
+        this.vehicles.forEach((element: any) => { if (element.id === id) obj = element });
+    }
+    return obj;
+  }
+
 }
