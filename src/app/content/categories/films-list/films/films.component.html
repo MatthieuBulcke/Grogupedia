@@ -1,16 +1,15 @@
 <div class="page">
     <div class="card">
         <div class="title"><h2>{{ this.film.title }}</h2></div>
-        <p>"Date Created: "+{{this.created}}</p> 
-        <p>"Realised by "+{{this.director}}</p>
-        <p>"Opening Crawl :"+{{this.opening_crawl}}</p>
-        </div>
+        <p>"Date Created: "+{{this.film.created}}</p> 
+        <p>"Realised by "+{{this.film.director}}</p>
+        <p>"Opening Crawl :"+{{this.film.opening_crawl}}</p>
     </div>
-    <div class="card_list"><p>{{this.species}}</p></div>
-    <div class="card_list"><p>{{this.starships}}</p></div>
-    <div class="card_list"><p>{{this.vehicles}}</p></div>
-    <div class="card_list"><p>{{this.characters}}</p></div>
-    <div class="card_list"><p>{{this.planets}}</p></div>
+    <div class="card_list"><p>{{this.film.species}}</p></div>
+    <div class="card_list"><p>{{this.film.starships}}</p></div>
+    <div class="card_list"><p>{{this.film.vehicles}}</p></div>
+    <div class="card_list"><p>{{this.film.characters}}</p></div>
+    <div class="card_list"><p>{{this.film.planets}}</p></div>
     <!-- <h3>{{episode_id}}</h3> -->
     <!-- <p>{{edited}}</p> -->
    <!-- <p>{{producer}}</p>
