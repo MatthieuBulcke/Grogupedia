@@ -1,6 +1,6 @@
-<figure class="card single">
-    <figcaption>{{this.film.title}}</figcaption>
-    <img src="https://starwars-visualguide.com/assets/img/films/{{this.film.id}}.jpg" alt="{{this.film.title}}">
+<figure class="card">
+    <figcaption>{{ this.film.title }}</figcaption>
+    <img src="https://starwars-visualguide.com/assets/img/films/{{this.film.id}}.jpg" alt="{{this.film.id}}" onerror="this.onerror=null;this.src='https\://starwars-visualguide.com/assets/img/big-placeholder.jpg';">
 </figure>
 <div class="filmDatas">
     <p>Producer: {{this.film.producer}}</p>
