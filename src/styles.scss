@@ -79,3 +79,34 @@ figure {
 ::-webkit-scrollbar-corner {
     background:#000;
 }
+
+app-single-film{
+    display: flex;
+    background: url('./assets/images/stars-back.jpg');
+    height: -webkit-fill-available;
+}
+app-single-people{
+    display: flex;
+    background: url('./assets/images/stars-back.jpg');
+    height: -webkit-fill-available;
+}
+app-single-planet{
+    display: flex;
+    background: url('./assets/images/stars-back.jpg');
+    height: -webkit-fill-available;
+}
+app-single-specie{
+    display: flex;
+    background: url('./assets/images/stars-back.jpg');
+    height: -webkit-fill-available;
+}
+app-single-starship{
+    display: flex;
+    background: url('./assets/images/stars-back.jpg');
+    height: -webkit-fill-available;
+}
+app-single-vehicle{
+    display: flex;
+    background: url('./assets/images/stars-back.jpg');
+    height: -webkit-fill-available;
+}
