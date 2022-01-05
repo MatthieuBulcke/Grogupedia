@@ -1,1 +1,15 @@
-<p>single-specie works!</p>
+<figure class="card">
+    <figcaption>{{ this.specie.name }}</figcaption>
+    <img src="https://starwars-visualguide.com/assets/img/species/{{this.specie.id}}.jpg" alt="{{this.specie.id}}" onerror="this.onerror=null;this.src='https\://starwars-visualguide.com/assets/img/big-placeholder.jpg';">
+</figure>
+<div class="speciesDatas">
+    <p>Classification: {{this.specie.classification}}</p>
+    <p>Designation: {{this.specie.designation}}</p>
+    <p>Average height: {{this.specie.average_height}}</p>
+    <p>Average Lifespan: {{this.specie.average_lifespan}}</p>
+    <p>Eye colors: {{this.specie.eye_colors}}</p>
+    <p>Hair colors: {{this.specie.hair_colors}}</p>
+    <p>Skin colors: {{this.specie.skin_colors}}</p>
+    <p>Language: {{this.specie.language}}</p>
+    <p>Homeworld: {{this.specie.homeworld}}</p>
+</div>

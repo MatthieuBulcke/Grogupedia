@@ -1,1 +1,16 @@
-<p>single-vehicle works!</p>
+<figure class="card">
+    <figcaption>{{ this.vehicle.name }}</figcaption>
+    <img src="https://starwars-visualguide.com/assets/img/vehicles/{{this.vehicle.id}}.jpg" alt="{{this.vehicle.id}}" onerror="this.onerror=null;this.src='https\://starwars-visualguide.com/assets/img/big-placeholder.jpg';">
+<div class="vehicleDatas">
+    <p>Model: {{this.vehicle.model}}</p>
+    <p>vehicle class: {{this.vehicle.vehicle_class}}</p>
+    <p>Manufacturer: {{this.vehicle.manufacturer}}</p>
+    <p>Cost in credits: {{this.vehicle.cost_in_credits}}</p>
+    <p>Length: {{this.vehicle.length}}</p>
+    <p>Crew: {{this.vehicle.crew}}</p>
+    <p>Passengers: {{this.vehicle.passengers}}</p>
+    <p>Max atmosphering speed: {{this.vehicle.max_atmosphering_speed}}</p>
+    <p>Cargo capacity: {{this.vehicle.cargo_capacity}}</p>
+    <p>Consumables: {{this.vehicle.consumables}}</p>
+</div>
+

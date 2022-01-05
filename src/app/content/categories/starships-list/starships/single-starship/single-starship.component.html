@@ -1,1 +1,17 @@
-<p>single-starship works!</p>
+<figure class="card">
+    <figcaption>{{ this.starship.name }}</figcaption>
+    <img src="https://starwars-visualguide.com/assets/img/starships/{{this.starship.id}}.jpg" alt="{{this.starship.id}}" onerror="this.onerror=null;this.src='https\://starwars-visualguide.com/assets/img/big-placeholder.jpg';">
+<div class="starshipDatas">
+    <p>Model: {{this.starship.model}}</p>
+    <p>Starship class: {{this.starship.starship_class}}</p>
+    <p>Manufacturer: {{this.starship.manufacturer}}</p>
+    <p>Cost in credits: {{this.starship.cost_in_credits}}</p>
+    <p>Length: {{this.starship.length}}</p>
+    <p>Crew: {{this.starship.crew}}</p>
+    <p>Passengers: {{this.starship.passengers}}</p>
+    <p>Max atmosphering speed: {{this.starship.max_atmosphering_speed}}</p>
+    <p>Hyperdrive rating: {{this.starship.hyperdrive_rating}}</p>
+    <p>MGLT: {{this.starship.MGLT}}</p>
+    <p>Cargo capacity: {{this.starship.cargo_capacity}}</p>
+    <p>Consumables: {{this.starship.consumables}}</p>
+</div>
