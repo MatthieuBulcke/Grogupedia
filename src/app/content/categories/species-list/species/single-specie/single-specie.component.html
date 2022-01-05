@@ -1,1 +1,20 @@
-<p>single-specie works!</p>
+<figure class="card single">
+    <figcaption>{{this.specie.name}}</figcaption>
+    <img src="https://starwars-visualguide.com/assets/img/planets/{{this.specie.id}}.jpg" alt="{{this.specie.name}}">
+</figure>
+<div class="peopleDatas">
+    <p>{{this.specie.name}}</p>
+    <p>Diameter: {{this.specie.classification}}</p>
+    <p>Rotation period: {{this.specie.designation}}</p>
+    <p>Orbital period: {{this.specie.average_height}}</p>
+    <p>Gravity: {{this.specie.average_lifespan}}</p>
+    <p>Population: {{this.specie.eye_colors}}</p>
+    <p>Climate: {{this.specie.hair_colors}}</p>
+    <p>Terrain: {{this.specie.skin_colors}}</p>
+    <p>Water surface: {{this.specie.language}}</p>
+    <p>Residents: {{this.specie.homeworld}}</p>
+    <p>People: {{this.specie.people}}</p>
+    <p>Films: {{this.specie.films}}</p>
+    <p>Creation: {{this.specie.created}}</p>
+    <p>Edition: {{this.specie.edited}}</p>
+</div>
