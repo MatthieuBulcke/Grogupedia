@@ -32,20 +32,19 @@ app-root {
 }
 
 .list > * {
-    min-width: 200px;
+    min-width: 300px;
     width: 20%;
 }
 
 /* FIGURES */
 figure {
-    padding: 5px;
     background-color: black;
     color: #FFE81F;
     border : 3px solid #FFE81F;
     border-radius: 5%;
     text-align: center;
+    height: fit-content;
 }
-
 .card img {
     width: 100%;
 }
@@ -71,8 +70,8 @@ figure {
 ::-webkit-scrollbar-thumb {
     background: url('./assets/images/LightSaber-4.png');
     background-size: cover;
-    min-height:12em;
-    max-height: 12em;
+    min-height: 13em;
+    max-height: 13em;
     border-radius:1em;
 }
 
