@@ -31,6 +31,11 @@ app-root {
     justify-content: flex-start;
 }
 
+.list > * {
+    min-width: 200px;
+    width: 20%;
+}
+
 /* FIGURES */
 figure {
     padding: 5px;
@@ -39,6 +44,10 @@ figure {
     border : 3px solid #FFE81F;
     border-radius: 5%;
     text-align: center;
+}
+
+.card img {
+    width: 100%;
 }
 
 .single {
